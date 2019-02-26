@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "better-scroll": "^1.14.1",
+    "mint-ui": "^2.2.13",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "swiper": "^4.4.6",
