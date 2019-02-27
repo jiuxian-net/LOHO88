@@ -24,13 +24,14 @@ export default {};
 #header {
   width: 100%;
   height: 1.2rem;
-  _background: yellow;
+  background: #ffffff;
   display: flex;
   position: fixed;
   left: 0;
   top: 0;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
   .left{
       width: 2.4rem;
       height: 100%;
