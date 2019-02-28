@@ -2,7 +2,7 @@
 	<div class = "content">
 		<h2>活动已结束</h2>
 		<div class = "GoodsList">
-			<div class = "Goods" v-for="(item,index) in goods">
+			<div class = "Goods" v-for="(item) in goods" :key="item.id">
 				<div class = "Goods_img">
 					<a href="##">
 						<img :src = "item.img">

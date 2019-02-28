@@ -3,4 +3,5 @@ export default {
     cates : [],
     popular : {},
     classify : [],
+    goods : []
 }

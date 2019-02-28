@@ -6,5 +6,11 @@ export default {
         state.classify = params.classify;
         
         console.log(state.classify[0].img)
+    },
+    handleHomeDataGoods(state,params){
+        
+        state.goods = params.data;
+        console.log(state.goods)
+
     }
 }
