@@ -83,7 +83,7 @@ export default {
       width: 100%;
       height: 1.2rem;
       background: #f2f2f2;
-      line-height: 1.2rem;
+      line-height: 1rem;
       text-align: center;
       font-size: 0.26rem;
       a {
