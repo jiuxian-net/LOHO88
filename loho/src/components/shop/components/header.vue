@@ -1,9 +1,9 @@
 <template>
 	<div class = "header">
-		<i class = "iconfont">&#xe64b;</i>
+		<a href="##"><i class = "iconfont">&#xe64b;</i></a>
 		<span>查找体验店</span>
-		<i class = "iconfont">&#xe600;</i>
-		<i class = "iconfont">&#xe606;</i>
+		<a href="##"><i class = "iconfont">&#xe600;</i></a>
+		<a href="##"><i class = "iconfont">&#xe606;</i></a>
 	</div>
 </template>
 
@@ -20,6 +20,10 @@
 		align-items: center;
 		padding:0 .4rem;
 		border-bottom:2px solid #f2f2f2;
+		position:fixed;
+		z-index:5;
+		top:0;
+		left:0;
 		span{
 			font-size:.3rem;
 			font-weight:600;
