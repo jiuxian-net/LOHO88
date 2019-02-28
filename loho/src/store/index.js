@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import home from "./home";
+import shop from "./shop"
 Vue.use(Vuex);
 
 let state = {};
@@ -15,7 +16,8 @@ const store = new Vuex.Store({
     getters,
     mutations,
     modules:{
-        home
+        home,
+		shop
     }
 })
 
