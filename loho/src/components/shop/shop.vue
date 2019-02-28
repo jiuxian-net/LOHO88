@@ -1,17 +1,24 @@
 <template>
-  <div>
-    <h2>shop</h2>
-  
+  <div class = "shop">
+		<Header-com/>
+		<Selectcard-com/>
   </div>
 </template>
 
 <script>
+	import Header from "./components/header";
+	import Selectcard from "./components/selectcard"
 export default {
- 
+	components:{
+		"Header-com" : Header,
+		"Selectcard-com" : Selectcard
+	}
 }
 </script>
 
 
-<style scoped>
-
+<style lang="scss" scoped>
+	.shop{
+		background:#f2f2f2;
+	}
 </style>
