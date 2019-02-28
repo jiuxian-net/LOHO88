@@ -10,8 +10,13 @@
         </div>
         <div class="footer_logo">
             <div class="img_box">
-                <img src="assets/images/logo.png" alt="">
+                <img src="http://m.loho88.com/assets/images/logo.png" alt="">
             </div>
+        </div>
+        <div class="link">
+            <p>ICP备案证书号：粤ICP备11106081</p>
+            <p>©2005-2018 深圳市乐活电子商务有限公司-时尚眼镜品牌 版权所有，并保留所有权利</p>
+            <p>公司地址：深圳市福田区彩田路彩虹新都彩虹大厦29B</p>
         </div>
     </div>
 </template>
@@ -45,15 +50,38 @@ export default {
                     i{
                         color: red;
                         font-size: .35rem;
-                        
                     }
                     span{
                         color: #ffffff;
-                        
                     }
                 }
 
             }
+
         }
+        .footer_logo{
+            width: 100%;
+            padding: .5rem 0;
+            .img_box{
+                border-bottom: 1px solid #000000;
+                img{
+                    width: 22.7%;
+                    vertical-align: middle;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .link{
+            width: 100%;
+            p{
+                width: 100%;
+                text-align: center;
+                color: #ffffff;
+                padding: .1rem 0;
+            }
+        }
+        
+        
     }
+    
 </style>

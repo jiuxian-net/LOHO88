@@ -12,11 +12,14 @@
   "dependencies": {
     "axios": "^0.18.0",
     "better-scroll": "^1.14.1",
+    "echarts": "^4.1.0",
     "mint-ui": "^2.2.13",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "swiper": "^4.4.6",
     "vue": "^2.5.2",
+    "vue-amap": "^0.5.8",
+    "vue-baidu-map": "^0.21.16",
     "vue-router": "^3.0.1",
     "vuex": "^3.1.0"
   },
@@ -25,6 +28,7 @@
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "^7.1.1",
+    "babel-plugin-component": "^1.1.1",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-plugin-transform-vue-jsx": "^3.5.0",

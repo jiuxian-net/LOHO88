@@ -3,10 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import "./mint/index"
 import './common/css/reset.css'
 import './common/js/flexble'
 import './assets/iconfont/iconfont.css'
 import store from './store'
+import "./mint"
+import '../static/mint-ui.css'
 Vue.config.productionTip = false
 
 

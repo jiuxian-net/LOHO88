@@ -1,10 +1,10 @@
 <template>
 	<div class = "shop">
 		<Beijing-com/>
-		<div class = "shops">
+		<div class = "shops" v-for = "(item,index) in stores">
 			<div class = "shop_name">
 				<a href="##">
-					<span>回龙观华联商厦店</span>
+					<span>{{item.catName}}</span>
 					<i class= "iconfont">&#xe64a;</i>
 				</a>
 			</div>
@@ -14,10 +14,10 @@
 					<span>17.76km</span>
 				</div>
 				<div class = "shop_img">
-					<img src="http://image.loho88.com/images/shop/30230/1522033906389561.jpg">
+					<img :src="'http://image.loho88.com/'+item.store_image">
 				</div>
 				<div class = "shop_site">
-					地址：北京市昌平区回龙观西大街111号华联商厦2层F2-36LOHO眼镜
+					地址：{{item.direction}}
 				</div>
 				<div class = "shop_call">
 					<a href="##" class = "yan">免费预约直营店验光</a>
@@ -29,8 +29,14 @@
 </template>
 
 <script>
-	import Beijing from "./beijing"
+	import Beijing from "./beijing";
+	import Vuex from "vuex";
 	export default{
+		computed:{
+			...Vuex.mapState({
+				stores:state=>state.shop.stores,
+			})
+		},
 		components:{
 			"Beijing-com" : Beijing
 		}
