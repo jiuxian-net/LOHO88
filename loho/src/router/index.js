@@ -19,6 +19,10 @@ export default new Router({
       name: 'home',
       component: Home
     },
+		{
+			path:'/details',
+			component : (resolve)=>require(["../components/components/details"],resolve)
+		},
     {
       path: '/group',
       name: 'group',
