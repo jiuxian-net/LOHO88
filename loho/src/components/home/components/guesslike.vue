@@ -15,7 +15,7 @@ export default {
     },
     methods: {
         handleToggle(){
-            console.log("1111")
+            this.flag = !this.flag;
         }
     }
 };

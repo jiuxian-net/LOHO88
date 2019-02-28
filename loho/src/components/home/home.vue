@@ -7,6 +7,7 @@
         <Category-com/>
         <Classify-com/>
         <Guesslike-com/>
+        <Footerlink-com/>
       </div>
     </div>
     
@@ -20,6 +21,7 @@ import Swiper from "./components/banner"
 import Category from "./components/category"
 import Classify from "./components/classify"
 import Guesslike from "./components/guesslike"
+import Footerlink from "./components/footerlink"
 import BSscroll from "better-scroll"
 export default {
   components: {
@@ -28,6 +30,7 @@ export default {
     "Category-com" : Category,
     "Classify-com" : Classify,
     "Guesslike-com" : Guesslike,
+    "Footerlink-com" : Footerlink,
   },
   created () {
     this.handleHomeData();
