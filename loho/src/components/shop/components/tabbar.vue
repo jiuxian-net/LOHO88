@@ -1,13 +1,13 @@
 <template>
 	<div class="tabbar">
 		<ul>
-<<<<<<< HEAD
+
 			<li v-for="(item,index) in tabBar" :key="item.id">
 				<a href="##" @click = "handleClick(index)">{{item}}</a>
-=======
+
 			<li v-for="(item,index) in tabBar">
 				<a href="##" @click = "handleClick(index)" :class = "afterIndex == index ? 'after' : ''">{{item}}</a>
->>>>>>> maliangbo
+
 			</li>
 			<div></div>
 		</ul>
