@@ -6,6 +6,7 @@ import Cart from "../components/cart/cart";
 import My from "../components/my/my";
 import Group from "../components/group/group"
 import ErrorCom from "../components/error"
+import City from "../components/city/city"
 Vue.use(Router)
 
 export default new Router({
@@ -21,7 +22,7 @@ export default new Router({
     },
 		{
 			path:'/details',
-			component : (resolve)=>require(["../components/components/details"],resolve)
+			component : (resolve)=>require(["../components/details/details"],resolve)
 		},
     {
       path: '/group',
@@ -43,6 +44,11 @@ export default new Router({
       name: 'my',
       component: My
     },
+		{
+			path : '/city',
+			name : 'city',
+			component : City
+		},
     {
       path:"**",
       component:ErrorCom
