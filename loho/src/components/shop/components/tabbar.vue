@@ -1,8 +1,13 @@
 <template>
 	<div class="tabbar">
 		<ul>
+<<<<<<< HEAD
 			<li v-for="(item,index) in tabBar" :key="item.id">
 				<a href="##" @click = "handleClick(index)">{{item}}</a>
+=======
+			<li v-for="(item,index) in tabBar">
+				<a href="##" @click = "handleClick(index)" :class = "afterIndex == index ? 'after' : ''">{{item}}</a>
+>>>>>>> maliangbo
 			</li>
 			<div></div>
 		</ul>
@@ -13,12 +18,14 @@
 	export default {
 		data() {
 			return {
-				tabBar: ["列表", "地图"]
+				tabBar: ["列表", "地图"],
+				afterIndex:0
 			}
 		},
 		methods:{
 			handleClick(index){
-				this.$emit("handleClick",index)
+				this.$emit("handleClick",index);
+				this.afterIndex = index;
 			}
 		}
 	}
@@ -40,7 +47,10 @@
 				width: 50%;
 				text-align: center;
 				line-height: 1rem;
-
+				.after{
+					border-bottom:2px solid #e8343b;
+					color:#e8343b;
+				}
 				a {
 					color: #000;
 					font-size: .29rem;

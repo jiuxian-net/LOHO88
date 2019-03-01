@@ -1,10 +1,10 @@
 <template>
   <div id="header">
     <div class="left">
-      <a href="##">
+      <routerLink to = "/city">
         北京市
         <i class="iconfont">&#xe695;</i>
-      </a>
+      </routerLink>
     </div>
     <div class="nav_logo"></div>
     <div class="right">
