@@ -10,7 +10,7 @@
         <Footerlink-com/>
       </div>
     </div>
-    
+     <Footer-com/>
   </div>
 </template>
 
@@ -22,7 +22,9 @@ import Category from "./components/category"
 import Classify from "./components/classify"
 import Guesslike from "./components/guesslike"
 import Footerlink from "./components/footerlink"
+import Footer from ".././common/footer"
 import BSscroll from "better-scroll"
+
 export default {
   components: {
     "Header-com" : Header,
@@ -31,6 +33,7 @@ export default {
     "Classify-com" : Classify,
     "Guesslike-com" : Guesslike,
     "Footerlink-com" : Footerlink,
+    "Footer-com" : Footer,
   },
   created () {
     this.handleHomeData();

@@ -5,6 +5,7 @@ import Shop from "../components/shop/shop";
 import Cart from "../components/cart/cart";
 import My from "../components/my/my";
 import Group from "../components/group/group"
+import Register from "../components/my/components/register"
 import ErrorCom from "../components/error"
 Vue.use(Router)
 
@@ -21,7 +22,7 @@ export default new Router({
     },
 		{
 			path:'/details',
-			component : (resolve)=>require(["../components/components/details"],resolve)
+			component : (resolve)=>require(["../components/details/details"],resolve)
 		},
     {
       path: '/group',
@@ -42,6 +43,11 @@ export default new Router({
       path: '/my',
       name: 'my',
       component: My
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: Register
     },
     {
       path:"**",

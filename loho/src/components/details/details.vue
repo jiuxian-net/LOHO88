@@ -8,9 +8,9 @@
 
 <script>
 	import  Vuex from "vuex";
-	import Header from './details/header';
-	import NavBar from './details/navbar';
-	import List from './details/infinite-scroll';
+	import Header from './components/header';
+	import NavBar from './components/navbar';
+	import List from './components/infinite-scroll';
 	
 	export default {
 		components:{

@@ -57,6 +57,7 @@ export default {
   bottom: 0;
   background: #fff;
   border-top: 0.01rem solid #c1c1c1;
+  z-index: 10;
   ul {
     display: flex;
     justify-content: space-between;

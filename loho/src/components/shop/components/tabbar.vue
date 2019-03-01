@@ -1,7 +1,7 @@
 <template>
 	<div class="tabbar">
 		<ul>
-			<li v-for="(item,index) in tabBar">
+			<li v-for="(item,index) in tabBar" :key="item.id">
 				<a href="##" @click = "handleClick(index)">{{item}}</a>
 			</li>
 			<div></div>

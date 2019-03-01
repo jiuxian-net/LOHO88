@@ -1,11 +1,11 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import home from "./home";
-<<<<<<< HEAD
+
 import details from "./details";
-=======
+
 import shop from "./shop"
->>>>>>> b55413b39021f0feec3f395a55e832663e087dc8
+
 Vue.use(Vuex);
 
 let state = {};
@@ -21,11 +21,11 @@ const store = new Vuex.Store({
     mutations,
     modules:{
         home,
-<<<<<<< HEAD
-		details
-=======
+
+		details,
+
 		shop
->>>>>>> b55413b39021f0feec3f395a55e832663e087dc8
+
     }
 })
 

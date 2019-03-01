@@ -1,31 +1,43 @@
 <template>
-  <div class="cartheader">
-    <mt-header title="购物车">
+  <div class="header">
+    <mt-header title="快速注册">
       <router-link to="/" slot="left">
         <mt-button icon="back"></mt-button>
       </router-link>
-      <mt-button class="iconfont list" slot="right">&#xe6a3;</mt-button>
+      <mt-button @click="handleClose">关闭</mt-button>
+      <router-link to="/" slot="right">
+        <mt-button class="iconfont">&#xe600;</mt-button>
+      </router-link>
+      <mt-button class="iconfont list" slot="right">&#xe60a;</mt-button>
     </mt-header>
   </div>
 </template>
+
 <script>
 export default {
+  data() {
+    return {};
+  },
 
+  methods: {
+    handleClose() {
+      alert("close this page");
+    }
+  }
 };
 </script>
+
 <style lang="scss" scoped>
-.cartheader {
+.header {
   width: 100%;
-  height: 1rem;
+  height: 1.2rem;
   background: #ffffff;
- 
   
   .mint-header {
     font-size: 0.35rem;
-    height: 1rem;
+    height: 1.2rem;
      background: #ffffff;
      color: #000000;
-      box-shadow: 0 0 4px rgba(0,0,0,.4);
     .is-right{
       a{
          margin-right: .6rem;
