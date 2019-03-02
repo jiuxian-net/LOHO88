@@ -20,9 +20,12 @@ export default {
     },
 	methods: {
 		handleClick(tid,cid) {
-			this.$router.push({path :'/details',query:{
-				 tid,cid
-			}});
+			if(tid){
+				this.$router.push({path :'/details',query:{
+					 tid,cid
+				}});
+			}//else{跳转体验店}
+			
 		},
 		
 	},

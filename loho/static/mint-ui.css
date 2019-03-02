@@ -2,7 +2,7 @@
 	width:97%;
 	height: 3.3rem;
 	position:fixed;
-	bottom:1.7rem;
+	bottom:1.3rem;
 	left:0;
 	margin-left:.1rem;
 ;
@@ -12,7 +12,7 @@
 	height:100%;
 	padding:0 .22rem;
 	background:#fff;
-	border:1px soli #f2f2f2;
+	border:1px solid #f2f2f2;
 }
 .mint-swipe-indicators{
 	display: none;

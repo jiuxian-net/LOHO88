@@ -1,7 +1,7 @@
 <template>
   <div class="page-swipe">
     <mt-swipe :auto="0">
-      <mt-swipe-item class="slide" v-for = "(item,index) in mapinfo" :key="item.id">
+      <mt-swipe-item class="slide" v-for = "(item) in mapinfo" :key="item.id">
 				<div class = "top">
 					<span class = "top_left">{{item.catName}}</span>
 					<span>
@@ -47,7 +47,7 @@
 				width:100%;
 				padding-top:1000px;
 				position: absolute;
-				bottom:30px;
+				bottom:20px;
 				left:0;
 			}
       .mint-swipe {

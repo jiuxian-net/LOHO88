@@ -33,6 +33,7 @@ export default {
 			this.scroll = new BScroll(this.$refs.shopWrapper,{
 				tap:true,
 				click:true,
+				scrollbar:true,
 			})
 		}
 		console.log(this.scroll)
@@ -46,8 +47,7 @@ export default {
 		background:#f2f2f2;
 		wdith:100%;
 		height:100%;
-		padding-top:1.35rem;
-		padding-bottom:1.4rem;
+		padding-top:.9rem;
 		.shopWrapper{
 			width:100%;
 			height:100%;

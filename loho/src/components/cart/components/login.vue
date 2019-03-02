@@ -3,12 +3,17 @@
         <div class="login_info">
             登录后可同步电脑与手机购物车中的商品
         </div>
-        <div class="login_btn"><a href="##">登录</a></div>
+        <div class="login_btn" @click="handleClick()"><a href="##" >登录</a></div>
     </div>
 </template>
 <script>
+import Vuex from "vuex"
 export default {
-    
+    methods: {
+        ...Vuex.mapMutations({
+            handleClick : "cart/handleClick",
+        })
+    }
 }
 </script>
 <style lang="scss" scoped>

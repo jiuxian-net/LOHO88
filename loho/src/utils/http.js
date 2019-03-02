@@ -17,11 +17,7 @@ const http = axios.create({
 
 //请求拦截
 http.interceptors.request.use((config)=>{
-
-   
-
     return config;
-
 },(err)=>{
 	console.log(err)
     return Promise.reject(err);
@@ -31,12 +27,9 @@ http.interceptors.request.use((config)=>{
 
 //响应拦截
 
-http.interceptors.response.use((res)=>{
-	
-    
+http.interceptors.response.use((res)=>{   
 	return  res.data
-},(err)=>{
-    
+},(err)=>{  
 	return Promise.reject(err);
 })
 

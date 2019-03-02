@@ -15,7 +15,6 @@
 	import Header from './components/header';
 	// import NavBar from './components/navbar';
 	import List from './components/listbetter';
-
 	export default {
 		data() {
 			return {
@@ -56,16 +55,14 @@
 			}
 		},
 		mounted() {
-			let {tid,cid}=this.$route.query;
-			console.log(tid)
 			this.scroll = new BScroll(this.$refs.detailsWrapper,{
 				pullUpLoad : true,
 				click : true,
 				tag : true
 			});
 			
-			this.scroll.on('pullingUp',(tid) => {
-				console.log(tid)
+			this.scroll.on('pullingUp',() => {
+				let {tid,cid}=this.$route.query;
 			if(this.page<=4){
 				this.handleDetails({tid,page:this.page});
 				

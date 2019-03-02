@@ -7,6 +7,9 @@ import My from "../components/my/my";
 import Group from "../components/group/group"
 import ErrorCom from "../components/error";
 import Details from "../components/details/details";
+import Product from "../components/product/product"
+import Register from "../components/my/components/register"
+import City from "../components/city/city"
 Vue.use(Router)
 
 export default new Router({
@@ -43,6 +46,21 @@ export default new Router({
       path: '/my',
       name: 'my',
       component:(resolve)=>require(["../components/my/my"],resolve)
+    },
+		{
+			path : '/city',
+			name : 'city',
+			component : City
+		},
+    {
+      path: '/register',
+      name: 'register',
+      component: Register
+    },
+    {
+      path: '/product',
+      name: 'product',
+      component: Product
     },
     {
       path:"**",

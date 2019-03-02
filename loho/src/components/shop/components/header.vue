@@ -1,6 +1,6 @@
 <template>
 	<div class = "header">
-		<a href="##"><i class = "iconfont">&#xe64b;</i></a>
+		<a href="##" @click="handleBack()"><i class = "iconfont">&#xe64b;</i></a>
 		<span>查找体验店</span>
 		<a href="##"><i class = "iconfont">&#xe600;</i></a>
 		<a href="##"><i class = "iconfont">&#xe606;</i></a>
@@ -8,6 +8,14 @@
 </template>
 
 <script>
+export default{
+	methods: {
+		handleBack(){
+			this.$router.back();
+			
+		}
+	}
+}
 </script>
 
 <style lang="scss" scoped>
