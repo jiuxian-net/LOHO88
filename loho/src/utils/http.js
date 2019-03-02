@@ -14,7 +14,7 @@ http.interceptors.request.use((config)=>{
     // if(method === "post"){
     //     config.data = qs.stringify(config.data);
     // }
-
+    
     return config;
 
 },(err)=>{

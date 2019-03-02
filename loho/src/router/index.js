@@ -5,6 +5,7 @@ import Shop from "../components/shop/shop";
 import Cart from "../components/cart/cart";
 import My from "../components/my/my";
 import Group from "../components/group/group"
+import Product from "../components/product/product"
 import Register from "../components/my/components/register"
 import ErrorCom from "../components/error"
 import City from "../components/city/city"
@@ -54,6 +55,11 @@ export default new Router({
       path: '/register',
       name: 'register',
       component: Register
+    },
+    {
+      path: '/product',
+      name: 'product',
+      component: Product
     },
     {
       path:"**",

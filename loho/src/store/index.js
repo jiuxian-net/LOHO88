@@ -1,16 +1,11 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import home from "./home";
-
-
 import details from "./details";
-
-
-
-
-
 import city from "./city";
-import shop from "./shop"
+import shop from "./shop";
+import cart from "./cart";
+import product from "./product"
 
 Vue.use(Vuex);
 
@@ -30,7 +25,9 @@ const store = new Vuex.Store({
 		home,
 		details,
 		shop,
-		city
+		city,
+		cart,
+		product,
 
 	}
 

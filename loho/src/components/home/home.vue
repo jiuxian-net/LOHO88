@@ -48,6 +48,7 @@ export default {
             this.scroll = new BSscroll(this.$refs.homeWrapper,{
               tap:true,
               click:true,
+              scrollbar:true,
             })
             console.log(this.scroll)
         }

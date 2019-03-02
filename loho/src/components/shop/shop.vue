@@ -33,6 +33,7 @@ export default {
 			this.scroll = new BScroll(this.$refs.shopWrapper,{
 				tap:true,
 				click:true,
+				scrollbar:true,
 			})
 		}
 		console.log(this.scroll)
