@@ -1,3 +1,5 @@
 export default{
-	list : {}
+	list : [],
+	page:0,
+	
 }

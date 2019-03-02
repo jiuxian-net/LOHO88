@@ -27,6 +27,8 @@ export default {
 </script>
 <style lang="scss">
 	.page-navbar{
+		width: 100%;
+		position: absolute;
 		border-bottom: .06rem solid #F2F2F2;
 		.mint-tab-item-label{
 			font-size:.28rem;

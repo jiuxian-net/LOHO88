@@ -1,12 +1,19 @@
 <template>
 	<div class = "header">
-		<a href="##"><i class = "iconfont">&#xe64b;</i></a>
+		<a href="##" @click="handleBack()"><i class = "iconfont">&#xe64b;</i></a>
 		<span>团购分类</span>
 		<a href="##"><i class = "iconfont">&#xe636;</i></a>
 	</div>
 </template>
 
 <script>
+export default{
+	methods: {
+		handleBack(){
+			this.$router.back()
+		}
+	}
+}
 </script>
 
 <style lang="scss" scoped>

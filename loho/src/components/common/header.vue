@@ -1,16 +1,16 @@
 <template>
   <div id="header">
     <div class="left">
-      <a href="##">
+      <routerLink to = "/city">
         北京市
         <i class="iconfont">&#xe695;</i>
-      </a>
+      </routerLink>
     </div>
     <div class="nav_logo"></div>
     <div class="right">
-      <a href="##">
+      <router-link to="/cart">
         <i class="iconfont cart">&#xe670;</i>
-      </a>
+      </router-link>
       <a href="##">
         <i class="iconfont my">&#xe61a;</i>
       </a>

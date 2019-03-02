@@ -4,8 +4,6 @@
       <router-link to="/" slot="left">
         <mt-button icon="back"></mt-button>
       </router-link>
-     
-      
       <mt-button class="iconfont list" slot="right">&#xe6a3;</mt-button>
     </mt-header>
   </div>

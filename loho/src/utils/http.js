@@ -3,31 +3,34 @@ import qs from "qs";
 
 
 const http = axios.create({
-    //baseURL:"XXXX",
-    timeout:5000
+	// responseType: 'json',
+// 	proxy: {
+//     host: '127.0.0.1',
+//     port: 9000,
+//     auth:{
+//       username: 'mikeymike',
+//       password: 'rapunz3l'
+//     }
+  // },
 })
 
 
 //请求拦截
 http.interceptors.request.use((config)=>{
-
-    // if(method === "post"){
-    //     config.data = qs.stringify(config.data);
-    // }
-
     return config;
-
 },(err)=>{
+	console.log(err)
     return Promise.reject(err);
 })
 
 
 
 //响应拦截
-http.interceptors.response.use((res)=>{
-    return res.data;
-},(err)=>{
-    return Promise.reject(err);
+
+http.interceptors.response.use((res)=>{   
+	return  res.data
+},(err)=>{  
+	return Promise.reject(err);
 })
 
 
