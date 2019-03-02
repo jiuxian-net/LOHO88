@@ -5,6 +5,7 @@
 			<div class = "content">
 				<Position-com/>
 				<Allcity-com/>
+				<Citys-com/>
 			</div>
 		</div>
 	</div>
@@ -15,12 +16,14 @@
 	import Header from "./components/header";
 	import Position from "./components/position";
 	import Allcity from "./components/allcity";
+	import Citys from "./components/citys";
 	import BScroll from "better-scroll";
 	export default{
 		components : {
 			"Header-com" : Header,
 			"Position-com" : Position,
-			"Allcity-com" : Allcity
+			"Allcity-com" : Allcity,
+			"Citys-com" : Citys
 		},
 		created(){
 			this.handleCityData();

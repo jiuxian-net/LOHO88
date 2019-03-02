@@ -2,7 +2,7 @@
 	<div class = "all_city">
 		<p>全部城市</p>
 		<ul>
-			<li v-for = "(item,index) in letters"><a href="##">{{item}}</a></li>
+			<li v-for = "(item,index) in letters" id = "mao"><a href="##">{{item}}</a></li>
 		</ul>
 	</div>
 </template>
@@ -45,6 +45,11 @@
 				border-bottom:1px solid #f2f2f2;
 				text-align:center;
 				line-height:1.2rem;
+				a{
+					display: inline-block;
+					width:100%;
+					height:100%;
+				}
 			}
 		}
 	}
