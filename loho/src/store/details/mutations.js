@@ -1,7 +1,11 @@
 export default{
 	handleDetails(state,params){
-		let list = params.list.result
-		state.list = params.list.result;
-		console.log(state.list,params.list.result)
+		state.list.push(...params)
+		console.log(state.list)
+	},
+	addpage(state,page){
+		
+		console.log(page)
 	}
+	
 }

@@ -1,5 +1,6 @@
 import {HomeData} from "../../apis/home";
-import {HomeDataGoods} from "../../apis/home"
+import {HomeDataGoods} from "../../apis/home";
+
 export default {
    async handleHomeData({commit}){
         let data = await HomeData({});
@@ -11,5 +12,6 @@ export default {
         console.log(data.result);
         commit("handleHomeDataGoods",data.result)
         
-    }
+    },
+	
 }

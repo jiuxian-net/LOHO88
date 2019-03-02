@@ -46,7 +46,7 @@ export default {
               tap:true,
               click:true,
             })
-            console.log(this.scroll)
+            
         }
     },
 }

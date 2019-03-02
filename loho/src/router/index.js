@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/home/home'
-import Shop from "../components/shop/shop";
+import Shop from "@/components/home/home";
 import Cart from "../components/cart/cart";
 import My from "../components/my/my";
 import Group from "../components/group/group"
-import ErrorCom from "../components/error"
+import ErrorCom from "../components/error";
+import Details from "../components/details/details";
 Vue.use(Router)
 
 export default new Router({
@@ -17,35 +18,35 @@ export default new Router({
     {
       path: '/home',
       name: 'home',
-      component: Home
+      component: (resolve)=>require(["@/components/home/home"],resolve)
     },
 		{
 			path:'/details',
-			component : (resolve)=>require(["../components/components/details"],resolve)
+			component : (resolve)=>require(["../components/details/details"],resolve)
 		},
     {
       path: '/group',
       name: 'group',
-      component: Group
+      component: (resolve)=>require(["../components/group/group"],resolve)
     },
     {
       path: '/shop',
       name: 'shop',
-      component: Shop
+      component: (resolve)=>require(["../components/my/my"],resolve)
     },
     {
       path: '/cart',
       name: 'cart',
-      component: Cart
+      component: (resolve)=>require(["../components/cart/cart"],resolve)
     },
     {
       path: '/my',
       name: 'my',
-      component: My
+      component:(resolve)=>require(["../components/my/my"],resolve)
     },
     {
       path:"**",
-      component:ErrorCom
+      component:(resolve)=>require(["../components/error"],resolve)
     }
   ]
 })
