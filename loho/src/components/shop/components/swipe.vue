@@ -47,7 +47,7 @@
 				width:100%;
 				padding-top:1000px;
 				position: absolute;
-				bottom:30px;
+				bottom:20px;
 				left:0;
 			}
       .mint-swipe {

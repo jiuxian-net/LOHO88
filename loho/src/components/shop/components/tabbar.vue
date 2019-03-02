@@ -1,7 +1,6 @@
 <template>
 	<div class="tabbar">
 		<ul>
-
 			<li v-for="(item,index) in tabBar" :key="item.id">
 				<a href="##" @click = "handleClick(index)" :class = "afterIndex == index ? 'after' : ''">{{item}}</a>
 
