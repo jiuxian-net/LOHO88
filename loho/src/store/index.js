@@ -6,6 +6,7 @@ import city from "./city";
 import shop from "./shop";
 import cart from "./cart";
 import product from "./product"
+import user from "./user"
 
 Vue.use(Vuex);
 
@@ -28,6 +29,7 @@ const store = new Vuex.Store({
 		city,
 		cart,
 		product,
+		user,
 
 	}
 
