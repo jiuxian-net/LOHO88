@@ -9,7 +9,7 @@ import './common/js/flexble'
 import './assets/iconfont/iconfont.css'
 import store from './store'
 import "./mint"
-import '../static/mint-ui.css'
+// import '../static/mint-ui.css'
 Vue.config.productionTip = false
 
 

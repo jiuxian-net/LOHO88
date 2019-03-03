@@ -1,9 +1,12 @@
 <template>
   <div class="category">
     <ul>
-      <li v-for="(item) in cates" :key="item.id"><a href="##"><div class="cate_img"><img :src="item.pic" alt=""/></div><span>{{item.tag}}</span></a></li>
-      
-      
+      <li v-for="(item) in cates" :key="item.id">
+			<button @click="handleClick(item.tid,item.cid)">
+				<div class="cate_img"><img :src="item.pic" alt=""/></div>
+				<span>{{item.tag}}</span>
+			</button>
+	</li> 
     </ul>
   </div>
 </template>
@@ -15,15 +18,23 @@ export default {
             cates : state => state.home.cates,
         })
     },
+	methods: {
+		handleClick(tid,cid) {
+			if(tid){
+				this.$router.push({path :'/details',query:{
+					 tid,cid
+				}});
+			}//else{跳转体验店}
+			
+		},
+		
+	},
 };
 </script>
 <style lang="scss" scoped>
 .category {
   width: 100%;
   height: 5rem;
-  padding: 0 0 .6rem;
-  background: #ffffff;
-  border-bottom: 1px solid #e1e1e1;
   margin-bottom: .3rem;
   ul{
       width: 100%;
@@ -33,14 +44,20 @@ export default {
       flex-wrap: wrap;
       li{
           width: 25%;
-          height: 2rem;
-          a{
+          height:50%;
+          button{
+			  background: #ffffff;
               width: 100%;
               height: 100%;
-              _display: block;
               display: flex;
               flex-direction: column;
+			  border-width: 0;
+			  border-color:#fff;
+			   border-style:inset; 
+			  padding: 0;
+			  
               span{
+				  width: 100%;
                   text-align: center;
                   display: block;
                   font-size: .28rem;

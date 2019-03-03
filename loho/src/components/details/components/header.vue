@@ -1,8 +1,7 @@
 <template>
-  <div>
     <div class="page-header-main">
       <mt-header fixed title="新品上市">
-        <router-link to="/" slot="left">
+        <router-link to="/home" slot="left">
           <mt-button icon="back"></mt-button>
         </router-link>
         <mt-button class="iconfont s5" slot="right">
@@ -13,8 +12,7 @@
 				</mt-button>
       </mt-header>
 
-      
-    </div>
+  
 
   </div>
 </template>
@@ -42,9 +40,11 @@ export default {
 element.style {
 }
 .page-header-main{
-		height: 60px;
+	background: red;
+		width: 100%;
+		height: 1.2rem;
 		.mint-header {
-			height:60px;
+			height: 1.2rem;
 			background:#fff;
 			border-bottom:1px solid #ccc;
 			// margin:0 0 1.0625rem -1.375rem;

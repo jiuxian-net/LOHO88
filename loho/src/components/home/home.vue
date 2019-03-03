@@ -50,7 +50,7 @@ export default {
               click:true,
               scrollbar:true,
             })
-            console.log(this.scroll)
+            
         }
     },
 }
