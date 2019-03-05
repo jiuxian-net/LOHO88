@@ -2,7 +2,8 @@
   <div class="cart">
     <Cartheader-com/>
     <Login-com @handleClick="handleClick"/>
-    <Cartbody-com/>
+    <!--<Cartbody-com/>-->
+		<List></List>
     <Loginmask-com/>
   </div>
 </template>
@@ -12,6 +13,7 @@ import Cartheader from "./components/cartheader"
 import Login from "./components/login"
 import Cartbody from "./components/cartbody"
 import Loginmask from "./components/loginmask"
+import List from "./components/list"
 export default {
   data(){
     return{
@@ -23,6 +25,7 @@ export default {
    "Login-com" : Login,
    "Cartbody-com" : Cartbody,
    "Loginmask-com" : Loginmask,
+	 "List" : List
  },
  methods: {
    handleClick(){
