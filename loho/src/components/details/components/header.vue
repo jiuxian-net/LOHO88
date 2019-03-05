@@ -1,15 +1,19 @@
 <template>
     <div class="page-header-main">
-      <mt-header fixed title="新品上市">
+      <mt-header fixed :title="tag">
         <router-link to="/home" slot="left">
           <mt-button icon="back"></mt-button>
         </router-link>
-        <mt-button class="iconfont s5" slot="right">
+				<router-link to="/cart" slot="right">
+        <mt-button class="iconfont s5"  >
 				&#xe600;
 				</mt-button>
-				<mt-button slot="right" class="iconfont" >
+				</router-link>
+				<router-link to="/my"  slot="right">
+				<mt-button  class="iconfont" >
 					&#xe606;
 				</mt-button>
+				</router-link>
       </mt-header>
 
   
@@ -26,7 +30,7 @@ export default {
 
     };
   },
-
+	props :["tag"],
   methods: {
     handleClose() {
       alert('close this page');
@@ -43,11 +47,14 @@ element.style {
 	background: red;
 		width: 100%;
 		height: 1.2rem;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 10011;
 		.mint-header {
 			height: 1.2rem;
 			background:#fff;
 			border-bottom:1px solid #ccc;
-			// margin:0 0 1.0625rem -1.375rem;
 			color: #222;
 			font-size:.32rem;;
 			.mint-header-button.is-right {
@@ -66,16 +73,4 @@ element.style {
 		}
 }
 
-//   @component-namespace page {
-//     @component header {
-//       @descendent main {
-//         margin-top: 50px;
-//         min-height: 120vh;
-// 
-//         > * {
-//           margin-bottom: 15px;
-//         }
-//       }
-//     }
-//   }
 </style>

@@ -1,26 +1,32 @@
 <template>
-	<div class="wrapper details-wrapper"  ref="detailsWrapper" >
+	<div class="wrapper details-wrapper">
 		<ul class="content" >
-			<NavBar-com></NavBar-com>
+			<!-- <NavBar-com></NavBar-com> -->
 			<li v-for="(item) in list" class="content-list">
 				<span v-if="item.isNew">NEW</span>
 				<p><img :src="'http://image.loho88.com/'+item.img" alt=""></p>
 				<p>{{item.title}}</p>
 				<p><span>￥{{item.price}}</span><span>{{item.salesNum}}人已买</span></p>
 			</li>
+			
 		</ul>
-		<div v-if="true" class="loading-wrapper">已经到底部了</div>
+		
 	</div>
 	
 </template>
 <script>
-	import BScroll from 'better-scroll';
+	// import BScroll from 'better-scroll';
 	import Vuex from 'vuex';
-	import NavBar from './navbar';
+	// import NavBar from './navbar';
 	export default {
+		data(){
+			return {
+				flag : true
+			}
+		},
 		props:["list"],
 		components: {
-			"NavBar-com": NavBar,
+			// "NavBar-com": NavBar,
 		},
 // 		computed: {
 // 			...Vuex.mapState({
@@ -28,33 +34,36 @@
 // 			}),
 // 
 // 		},
-		mounted() {
-			this.$nextTick(() => {
-				this.scroll = new BScroll(this.$refs.detailsWrapper, {
-					scrollY: true,
-					pulldown: true,
-					pullup: true
-				})
-				
-			})
-		},
+// 		mounted() {
+// 			this.$nextTick(() => {
+// 				this.scroll = new BScroll(this.$refs.detailsWrapper, {
+// 					scrollY: true,
+// 					pulldown: true,
+// 					pullup: true
+// 				})
+// 				
+// 				
+// 			})
+// 		},
 	}
 </script>
 <style lang="scss">
 	.details-wrapper {
 		width: 100%;
-		min-height: 6.67rem;
-		overflow: hidden;
-		position: absolute;
-		padding-bottom: .5rem;
 		background:#f2f2f2;
 		z-index: 100;
+		// position: absolute;
+		top:1rem;
+		left: 0;
+		// height: 100%;
 		.content {
 			width: 100%;
+			height: 100%;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
-			padding-bottom: .9rem;
+			
+			
 			.content-list {
 				width: 50%;
 				height: 5.14rem;

@@ -1,5 +1,7 @@
 export default{
 	list : [],
-	page:0,
+	page:1,
+	url1 : "",
+	url2 : ""
 	
 }
