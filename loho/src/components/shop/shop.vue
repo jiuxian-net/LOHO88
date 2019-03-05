@@ -16,16 +16,24 @@
 	import Header from "./components/header";
 	import Selectcard from "./components/selectcard"
 export default {
+	created() {
+		//this.handleShopData();
+			//console.log(this.$route.query)
+			let {cityId}=this.$route.query;
+			
+			this.handleCity(cityId);
+			console.log(cityId)
+			
+		},
 	components:{
 		"Header-com" : Header,
 		"Selectcard-com" : Selectcard
 	},
-	 created () {
-	  this.handleShopData();
-	},
+	
 	methods: {
 	  ...Vuex.mapActions({
-	    handleShopData:"shop/handleShopData"
+			//handleShopData:"shop/handleShopData",
+			handleCity:"shop/handleCity"
 	  })
 	},
 	mounted(){
@@ -45,7 +53,7 @@ export default {
 <style lang="scss" scoped>
 	.shop{
 		background:#f2f2f2;
-		wdith:100%;
+		width:100%;
 		height:100%;
 		padding-top:.9rem;
 		.shopWrapper{

@@ -1,10 +1,10 @@
 <template>
 	<div class = "citys">
-		<div class = "citys_A-city" v-for = "(item,index) in letters">
+		<div class = "citys_A-city" v-for = "(item,index) in letters" :key="item.id">
 			<p>{{item}}</p>
 			<div class = "citys_city">
 				<ul>
-					<li v-for="(a) in list[item]"><a href="#mao">{{a.cityName}}</a></li>
+					<li v-for="(a) in list[item]" :key="a.id" @click="handleBtn(a.cityId)">{{a.cityName}}</li>
 				</ul>
 			</div>
 		</div>
@@ -14,6 +14,7 @@
 <script>
 	import Vuex from "vuex";
 	export default{
+		
 		computed:{
 			...Vuex.mapState({
 				list:state=>state.city.list,
@@ -21,7 +22,19 @@
 			...Vuex.mapState({
 				letters:state=>state.city.letters,
 			})
-		}
+		},
+		methods: {
+			handleBtn(cityId){
+				console.log(cityId)
+				if(cityId){
+					this.$router.push({path:"/shop",query:{
+						cityId:cityId
+					}})
+				}
+				
+			}
+		},	
+
 	}
 </script>
 

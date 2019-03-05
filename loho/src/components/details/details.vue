@@ -27,6 +27,7 @@
 			}
 		},
 		created() {
+
 			this.tag = this.$route.query.tag;
 // 			let {tid,cid} = this.$route.query;
 // 			console.log({tid,cid}, this)
