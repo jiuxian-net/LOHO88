@@ -9,8 +9,8 @@
                 <li v-for="(item) in popular.show" :key="item.id"><a href="##" ><p class="title">{{item.tag}}</p><p class="english">{{item.tag_en}}</p><p class="item_img"><img :src="item.pic" alt=""></p></a></li>
             </ul>
     </div>-->
-    <router-link to="/product">
-      <div class="classify_kind" v-for="(item) in classify" :key="item.id">
+    
+      <div class="classify_kind" v-for="(item) in classify" :key="item.id" >
         <h2>
           <span>{{item.title.word}}</span>
           <a href>{{item.more.word}}</a>
@@ -19,8 +19,8 @@
           <img :src="item.img.pic" alt>
         </div>
         <ul class="banner_item">
-          <li v-for="(item) in item.show" :key="item.id">
-            <a href="##">
+          <li v-for="(item) in item.show" :key="item.id" >
+            <a href="##" @click="handleClick(item.gid)">
               <p class="title">{{item.tag}}</p>
               <p class="english">{{item.tag_en}}</p>
               <p class="item_img">
@@ -30,7 +30,7 @@
           </li>
         </ul>
       </div>
-    </router-link>
+    
   </div>
 </template>
 <script>
@@ -42,7 +42,19 @@ export default {
       popular: state => state.home.popular,
       classify: state => state.home.classify
     })
+  },
+  methods: {
+    handleClick(gid){
+      console.log(gid)
+      
+        this.$router.push({path : "/product",query:{
+          gid:gid,
+        }})
+      
+        
+    }
   }
+
 };
 </script>
 <style lang="scss" scoped>

@@ -1,4 +1,9 @@
+import {getCookie,setCookie} from "../../utils/auth"
 export default{
-    username : "马良博",
-    password : "123456",
+    username : "",
+    password : "",
+    user:"",
+    token:""||getCookie(),
+    flag : null,
+   color : "color",
 }

@@ -17,7 +17,16 @@
 		</div>
 	</div>
 </template>
-
+<script>
+import Vuex from "vuex"
+export default {
+	computed: {
+		...Vuex.mapState({
+			
+		})
+	},
+}
+</script>
 <style lang="scss">
 	
 .page-infinite-list{

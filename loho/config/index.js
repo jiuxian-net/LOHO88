@@ -13,11 +13,24 @@ module.exports = {
     proxyTable: {
       "/api" : {
         target : "http://m.loho88.com",
+
         changeOrigin : true,
         pathRewrite : {
           "^/api" : ""
         }
-      }
+       
+      },
+      "/users" : {
+        target : "http://localhost:3000",
+
+        changeOrigin : true,
+        pathRewrite : {
+          "^/users" : ""
+        }
+       
+      },
+
+      
     },
 
     // Various Dev Server settings

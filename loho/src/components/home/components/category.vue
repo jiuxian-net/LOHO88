@@ -13,6 +13,7 @@
 <script>
 import Vuex from "vuex";
 export default {
+    
     computed: {
         ...Vuex.mapState({
             cates : state => state.home.cates,
@@ -20,14 +21,17 @@ export default {
     },
 	methods: {
 		handleClick(tid,cid) {
+            console.log(tid,cid)
 			if(tid){
+               
 				this.$router.push({path :'/details',query:{
 					 tid,cid
 				}});
 			}//else{跳转体验店}
-			
-		},
 		
+		},
+        
+        
 	},
 };
 </script>

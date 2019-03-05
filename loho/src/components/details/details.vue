@@ -22,9 +22,11 @@
 			}
 		},
 		created() {
+			//console.log(this.$route.query)
 			let {tid,cid}=this.$route.query;
 			console.log({tid,cid},this)
 			this.handleDetails({tid,page:1})
+			
 		},
 		components: {
 			"Header-com": Header,
