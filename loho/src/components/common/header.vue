@@ -11,9 +11,11 @@
       <router-link to="/cart">
         <i class="iconfont cart">&#xe670;</i>
       </router-link>
-      <a href="##">
-        <i class="iconfont my">&#xe61a;</i>
-      </a>
+			<router-link to="/my">
+				<a href="##">
+					<i class="iconfont my">&#xe61a;</i>
+				</a>
+			</router-link>
     </div>
   </div>
 </template>

@@ -10,6 +10,13 @@ import Details from "../components/details/details";
 import Product from "../components/product/product"
 import Register from "../components/my/components/register"
 import City from "../components/city/city"
+import Preson from "../components/preson/preson"
+import Xinxi from "../components/preson/components/xinxi"
+import Mytuangou from "../components/preson/components/mytuangou"
+import Shoucang from "../components/preson/components/shoucang"
+import Yanguang from "../components/preson/components/yanguang"
+import Dizhi from "../components/preson/components/dizhi"
+import Password from "../components/preson/components/password"
 Vue.use(Router)
 
 export default new Router({
@@ -35,7 +42,7 @@ export default new Router({
     {
       path: '/shop',
       name: 'shop',
-      component: (resolve)=>require(["../components/my/my"],resolve)
+      component: (resolve)=>require(["../components/shop/shop"],resolve)
     },
     {
       path: '/cart',
@@ -62,6 +69,41 @@ export default new Router({
       name: 'product',
       component: Product
     },
+		{
+			path: '/preson',
+			name: 'preson',
+			component: Preson
+		},
+		{
+			path: '/xinxi',
+			name: 'xinxi',
+			component: Xinxi
+		},
+		{
+			path: '/mytuangou',
+			name: 'mytuangou',
+			component: Mytuangou
+		},
+		{
+			path: '/shoucang',
+			name: 'shoucang',
+			component: Shoucang
+		},
+		{
+			path: '/yanguang',
+			name: 'yanguang',
+			component: Yanguang
+		},
+		{
+			path: '/dizhi',
+			name: 'dizhi',
+			component: Dizhi
+		},
+		{
+			path: '/password',
+			name: 'password',
+			component: Password
+		},
     {
       path:"**",
       component:(resolve)=>require(["../components/error"],resolve)

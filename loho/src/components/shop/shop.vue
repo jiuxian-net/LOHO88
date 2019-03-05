@@ -47,7 +47,7 @@ export default {
 		background:#f2f2f2;
 		wdith:100%;
 		height:100%;
-		padding-top:.9rem;
+		padding-top:.7rem;
 		.shopWrapper{
 			width:100%;
 			height:100%;
