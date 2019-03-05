@@ -1,12 +1,14 @@
 <template>
 	<div class="wrapper details-wrapper">
-		<ul class="content" >
+		<ul class="content" @click="handlegocart()">
 			<!-- <NavBar-com></NavBar-com> -->
 			<li v-for="(item) in list" class="content-list">
-				<span v-if="item.isNew">NEW</span>
-				<p><img :src="'http://image.loho88.com/'+item.img" alt=""></p>
-				<p>{{item.title}}</p>
-				<p><span>￥{{item.price}}</span><span>{{item.salesNum}}人已买</span></p>
+				<button>
+					<span v-if="item.isNew">NEW</span>
+					<p><img :src="'http://image.loho88.com/'+item.img" alt=""></p>
+					<p>{{item.title}}</p>
+					<p><span>￥{{item.price}}</span><span>{{item.salesNum}}人已买</span></p>
+				</button>
 			</li>
 			
 		</ul>
@@ -25,6 +27,11 @@
 			}
 		},
 		props:["list"],
+		methods:{
+			handlegocart(){
+				this.$router.push("/product");
+			}
+		},
 		components: {
 			// "NavBar-com": NavBar,
 		},
@@ -70,51 +77,57 @@
 				border: .03rem solid #f2f2f2;
 				padding: .3rem;
 				background: #fff;
-
-				span {
-					color: #E51c23;
-					font-size: .28rem;
-				}
-
-				p {
-					margin: 0 auto;
-				}
-
-				p:nth-of-type(1) {
-					width: 3.2rem;
-					height: 2.88rem;
-					display: flex;
-					align-items: center;
-
-					img {
-						max-width: 100%;
-						height: auto;
+				button{
+					border: 0;
+					padding: 0;
+					width: 100%;
+					background: #fff;
+					span {
+						color: #E51c23;
+						font-size: .28rem;
+					}
+					
+					p {
+						margin: 0 auto;
+					}
+					
+					p:nth-of-type(1) {
+						width: 3.2rem;
+						height: 2.88rem;
+						display: flex;
+						align-items: center;
+					
+						img {
+							max-width: 100%;
+							height: auto;
+						}
+					}
+					
+					p:nth-of-type(2) {
+						height: .8rem;
+						line-height: .40rem;
+						letter-spacing: .02rem;
+						overflow: hidden;
+						font-size: .28rem;
+						text-overflow: ellipsis;
+						-webkit-box-pack: center;
+						-webkit-line-clamp: 2;
+					}
+					
+					p:nth-of-type(3) {
+						height: .6rem;
+						display: flex;
+						justify-content: space-between;
+						margin-top: .01rem;
+						align-items: center;
+					
+						span:nth-of-type(2) {
+							color: #c1c1c1;
+							font-size: .24rem !important;
+						}
 					}
 				}
-
-				p:nth-of-type(2) {
-					height: .8rem;
-					line-height: .40rem;
-					letter-spacing: .02rem;
-					overflow: hidden;
-					font-size: .28rem;
-					text-overflow: ellipsis;
-					-webkit-box-pack: center;
-					-webkit-line-clamp: 2;
-				}
-
-				p:nth-of-type(3) {
-					height: .6rem;
-					display: flex;
-					justify-content: space-between;
-					margin-top: .01rem;
-					align-items: center;
-
-					span:nth-of-type(2) {
-						color: #c1c1c1;
-						font-size: .24rem !important;
-					}
-				}
+				
 			}
 		}
 	}

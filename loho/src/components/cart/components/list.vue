@@ -44,8 +44,16 @@
 </template>
 
 <script>
+	import Vuex from 'vuex';
 	export default {
-
+		created(){
+			this.handleAddcart()
+		},
+		methods:{
+			...Vuex.mapActions({
+				handleAddcart : "cart/handleAddcart"
+			})
+		}
 	}
 </script>
 
