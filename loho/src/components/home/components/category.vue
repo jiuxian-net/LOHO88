@@ -20,15 +20,8 @@ export default {
         })
     },
 	methods: {
-<<<<<<< HEAD
-		handleClick(tid,cid) {
-            console.log(tid,cid)
-			if(tid){
-               
-=======
 		handleClick(tid,cid,tag) {
 			if({tid,cid,tag}){
->>>>>>> master
 				this.$router.push({path :'/details',query:{
 					 tid,cid,tag
 				}});

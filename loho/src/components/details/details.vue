@@ -27,20 +27,13 @@
 			}
 		},
 		created() {
-<<<<<<< HEAD
-			//console.log(this.$route.query)
-			let {tid,cid}=this.$route.query;
-			console.log({tid,cid},this)
-			this.handleDetails({tid,page:1})
-			
-=======
+
 			this.tag = this.$route.query.tag;
 // 			let {tid,cid} = this.$route.query;
 // 			console.log({tid,cid}, this)
 // 			this.handleDetails({tid,page: 1}) //params
 			let {tid,cid} = this.$route.query;
 			this.handleDetailspage({tid,page: 1})
->>>>>>> master
 		},
 		components: {
 			"Header-com": Header,
