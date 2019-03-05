@@ -1,17 +1,14 @@
-import state from "./state"
 import actions from "./actions"
-import getters from "./getters"
+import state from "./state"
 import mutations from "./mutations"
-
-
-
+import getters from "./getters"
 
 
 export default{
     state,
     actions,
-    getters,
     mutations,
+    getters,
     namespaced: true
-        
+    
 }

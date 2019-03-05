@@ -50,7 +50,7 @@
 		width:100%;
 		height:100%;
 		background:#f2f2f2;
-		padding-top:.7rem;
+		padding-top:1.2rem;
 		
 	}
 	.shopWrapper{

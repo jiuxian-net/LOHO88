@@ -9,7 +9,7 @@ export default {
     },
     async handleHomeDataGoods({commit}){
         let data = await HomeDataGoods({});
-        
+        console.log(data);
         commit("handleHomeDataGoods",data.result)
         
     },

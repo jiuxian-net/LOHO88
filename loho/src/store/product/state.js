@@ -1,3 +1,9 @@
 export default{
-    info : {}
+    info : {},
+    models : [],
+    unioned : [],
+    arguments : [],
+    list : [],
+    txtcontent : "",
+    num : 0,
 }

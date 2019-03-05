@@ -13,6 +13,7 @@
 <script>
 import Vuex from "vuex";
 export default {
+    
     computed: {
         ...Vuex.mapState({
             cates : state => state.home.cates,
@@ -26,9 +27,10 @@ export default {
 				}});
 				this.$router.go(0)
 			}//else{跳转体验店}
-			
-		},
 		
+		},
+        
+        
 	},
 };
 </script>
