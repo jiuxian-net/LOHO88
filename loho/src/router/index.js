@@ -47,10 +47,14 @@ const router =  new Router({
     {
       path: '/shop',
       name: 'shop',
+<<<<<<< HEAD
       component: (resolve)=>require(["../components/shop/shop"],resolve),
       meta : {
         auth : true,
       }
+=======
+      component: (resolve)=>require(["../components/shop/shop"],resolve)
+>>>>>>> master
     },
     {
       path: '/cart',

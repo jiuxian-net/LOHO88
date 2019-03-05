@@ -6,9 +6,31 @@
     </div>
 </template>
 <script>
+	import Vuex from 'vuex';
 export default {
-    
+    data(){
+		return {
+			
+		}
+	},
+	created(){
+		
+
+	},
+	computed:{
+// 		...Vuex.mapState({
+// 			data : state=>state.cart.url
+// 		})
+	},
+	mounted(){
+		console.log(this)
+	}
+	
+	
 }
+
+
+
 </script>
 <style lang="scss" scoped>
     .cartbody{

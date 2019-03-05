@@ -1,8 +1,8 @@
 <template>
   <div class="category">
     <ul>
-      <li v-for="(item) in cates" :key="item.id">
-			<button @click="handleClick(item.tid,item.cid)">
+      <li v-for="(item,index) in cates" :key="item.id">
+			<button @click="handleClick(item.tid,item.cid,item.tag)">
 				<div class="cate_img"><img :src="item.pic" alt=""/></div>
 				<span>{{item.tag}}</span>
 			</button>
@@ -20,13 +20,19 @@ export default {
         })
     },
 	methods: {
+<<<<<<< HEAD
 		handleClick(tid,cid) {
             console.log(tid,cid)
 			if(tid){
                
+=======
+		handleClick(tid,cid,tag) {
+			if({tid,cid,tag}){
+>>>>>>> master
 				this.$router.push({path :'/details',query:{
-					 tid,cid
+					 tid,cid,tag
 				}});
+				this.$router.go(0)
 			}//else{跳转体验店}
 		
 		},
