@@ -2,7 +2,7 @@ import axios from "axios";
 import qs from "qs";
 
 
-const http = axios.create({
+const use = axios.create({
 	// responseType: 'json',
 // 	proxy: {
 //     host: '127.0.0.1',
@@ -16,7 +16,7 @@ const http = axios.create({
 
 
 //请求拦截
-http.interceptors.request.use((config)=>{
+use.interceptors.request.use((config)=>{
 	console.log(config)
     return config;
 },(err)=>{
@@ -28,7 +28,7 @@ http.interceptors.request.use((config)=>{
 
 //响应拦截
 
-http.interceptors.response.use((res)=>{   
+use.interceptors.response.use((res)=>{   
 	return  res.data
 },(err)=>{  
 	return Promise.reject(err);
@@ -37,9 +37,9 @@ http.interceptors.response.use((res)=>{
 
 export default (method,url,data=null)=>{
     if(method == "post"){
-        return http.post(url,data);
+        return use.post(url,data);
     }else if(method == "get"){
-        return http.get(url,{params:data});
+        return use.get(url,{params:data});
     }else{
         return;
     }

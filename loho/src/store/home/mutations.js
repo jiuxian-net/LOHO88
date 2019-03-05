@@ -2,7 +2,7 @@ export default {
     handleHomeData(state,params){
         state.focus = params.focus;
         state.cates = params.cates;
-		console.log(state.cates)
+		// console.log(state.cates)
         state.popular = params.popular;
         state.classify = params.classify;
         
@@ -11,7 +11,7 @@ export default {
     handleHomeDataGoods(state,params){
         
         state.goods = params.data;
-        console.log(state.goods)
+        // console.log(state.goods)
 
     },
 	

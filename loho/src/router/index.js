@@ -35,7 +35,7 @@ export default new Router({
     {
       path: '/shop',
       name: 'shop',
-      component: (resolve)=>require(["../components/my/my"],resolve)
+      component: (resolve)=>require(["../components/shop/shop"],resolve)
     },
     {
       path: '/cart',

@@ -1,11 +1,12 @@
 export default{
-	handleDetails(state,params){
+// 	handleDetails(state,params){
+// 		state.list.push(...params)
+// 		// console.log(state.list)
+// 	},
+	handleDetailspage(state,params){
+		// console.log(...params)
 		state.list.push(...params)
 		console.log(state.list)
-	},
-	addpage(state,page){
-		
-		console.log(page)
 	}
 	
 }

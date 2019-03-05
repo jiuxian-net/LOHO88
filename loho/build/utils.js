@@ -5,12 +5,23 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const packageConfig = require('../package.json')
 
 exports.assetsPath = function (_path) {
-  const assetsSubDirectory = process.env.NODE_ENV === 'production'
-    ? config.build.assetsSubDirectory
-    : config.dev.assetsSubDirectory
-
+  const assetsSubDirectory = process.env.NODE_ENV === 'production' 
+															// process.env.NODE_ENV === 'production'
+																		? config.build.assetsSubDirectory
+																		: config.dev.assetsSubDirectory
+// 															: process.env.Api_RooT === 'locahost:3000'
+// 																		? config.build.assetsSubDirectory
+// 																		: config.dev.assetsSubDirectory
+																
   return path.posix.join(assetsSubDirectory, _path)
 }
+// exports.assetsApiPath = function (_path) {
+// 	const assetsApiDirectory = ptocess.env.Api_RooT === 'locahost:3000'
+// 			? config.build.assetsApiDirectory
+// 			: config.dev.assetsApiDirectory
+// 			
+// 			return path.posix.join(assetsApiDirectory, _path)
+// }
 
 exports.cssLoaders = function (options) {
   options = options || {}
