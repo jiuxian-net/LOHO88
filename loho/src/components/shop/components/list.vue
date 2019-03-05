@@ -2,13 +2,13 @@
 	<div class = "shop">
 		<Beijing-com/>
 		<div class = "shops" v-for = "(item,index) in stores">
-			<div class = "shop_name">
+			<div class = "shop_name"  >
 				<a href="##">
 					<span>{{item.catName}}</span>
 					<i class= "iconfont">&#xe64a;</i>
 				</a>
 			</div>
-			<div class = "shop_content">
+			<div class = "shop_content" >
 				<div class = "km">
 					<i class = "iconfont">&#xe612;</i>
 					<span>17.76km</span>
@@ -32,6 +32,13 @@
 	import Beijing from "./beijing";
 	import Vuex from "vuex";
 	export default{
+		data(){
+			return{
+				flag : true,
+				num:""
+			}
+			
+		},
 		computed:{
 			...Vuex.mapState({
 				stores:state=>state.shop.stores,
