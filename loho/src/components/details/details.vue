@@ -74,8 +74,6 @@
 			},
 			//点击navBar重新渲染页面
 			handleclick(data){
-				console.log(data)
-				console.log(this)
 				switch(data.index){
 					case  0:
 					console.log(data.params)
@@ -84,17 +82,16 @@
 						break;
 					case 1 :
 						this.handleDetailspage(data.params)
-						this.$router.go();
+						this.$router.go(0);
 						break;
 					case 2 : 
 						this.handleDetailspage(data.params)
-						this.$router.go();
+						this.$router.go(0);
 						break;
 					case 3 :
 						break;
 					default : break;
 				}
-				console.log(this.listpage1,this.listpage2)
 			}
 		},
 		
