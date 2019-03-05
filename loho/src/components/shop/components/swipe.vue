@@ -25,6 +25,7 @@
 
 <script>
 	import Vuex from "vuex";
+	import mincss from "../../../../static/mint-ui.css"
 	export default{
 		computed:{
 			...Vuex.mapState({

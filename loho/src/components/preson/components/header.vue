@@ -1,26 +1,12 @@
 <template>
 	<div class = "header">
 		<a href="##" @click="handleBack()"><i class = "iconfont">&#xe64b;</i></a>
-		<span>查找体验店</span>
-		<routerLink to = "/cart">
-			<a href="##"><i class = "iconfont">&#xe600;</i></a>
-		</routerLink>
-		<a href="##"><i class = "iconfont" @click="handeleClickVip()" :class = "this.flag == true ? 'pink' : ''">&#xe606;</i></a>
-		<div class = "vip" v-show="flag">
-			<ul>
-				<li>
-					<a href="##">
-						<i class = "iconfont">&#xe629;</i>
-						<span class = "vip_v">会员中心</span>
-					</a>
-				</li>
-				<li>
-					<a href="##">
-						<i class = "iconfont">&#xe6d3;</i>
-						<span class = "vip_v">首页</span>
-					</a>
-				</li>
-			</ul>
+		<span>会员中心</span>
+		<div>
+			<routerLink to = "/home">
+				<a href="##"><i class = "iconfont">&#xe614;</i></a>
+			</routerLink>
+			<a href="##"><i class = "iconfont">&#xe643;</i></a>
 		</div>
 	</div>
 </template>
@@ -47,13 +33,12 @@ export default{
 <style lang="scss" scoped>
 	.header{
 		width:100%;
-		height:1.2rem;
+		height:1rem;
 		background:#fff;
 		display:flex;
 		justify-content: space-between;
 		align-items: center;
 		padding:0 .4rem;
-		border-bottom:2px solid #f2f2f2;
 		position:fixed;
 		z-index:5;
 		top:0;
@@ -64,10 +49,11 @@ export default{
 		span{
 			font-size:.3rem;
 			font-weight:600;
-			margin-left:1.3rem;
+			margin-left:.8rem;
 		}
 		.iconfont{
-			font-size:.55rem;
+			font-size:.4rem;
+			margin-left:.3rem;
 			.pink{
 				color:#e8343b
 			}

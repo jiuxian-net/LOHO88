@@ -12,6 +12,13 @@ import Register from "../components/my/components/register"
 import City from "../components/city/city"
 import state from '../store/user/state'
 import store from "../store/index"
+import Preson from "../components/preson/preson"
+import Xinxi from "../components/preson/components/xinxi"
+import Mytuangou from "../components/preson/components/mytuangou"
+import Shoucang from "../components/preson/components/shoucang"
+import Yanguang from "../components/preson/components/yanguang"
+import Dizhi from "../components/preson/components/dizhi"
+import Password from "../components/preson/components/password"
 Vue.use(Router)
 
 const router =  new Router({
@@ -92,6 +99,62 @@ const router =  new Router({
         auth : true,
       }
     },
+		{
+			path: '/preson',
+			name: 'preson',
+      component: Preson,
+      meta : {
+        auth : true,
+      }
+		},
+		{
+			path: '/xinxi',
+			name: 'xinxi',
+      component: Xinxi,
+      meta : {
+        auth : true,
+      }
+		},
+		{
+			path: '/mytuangou',
+			name: 'mytuangou',
+      component: Mytuangou,
+      meta : {
+        auth : true,
+      }
+		},
+		{
+			path: '/shoucang',
+			name: 'shoucang',
+      component: Shoucang,
+      meta : {
+        auth : true,
+      }
+		},
+		{
+			path: '/yanguang',
+			name: 'yanguang',
+      component: Yanguang,
+      meta : {
+        auth : true,
+      }
+		},
+		{
+			path: '/dizhi',
+			name: 'dizhi',
+      component: Dizhi,
+      meta : {
+        auth : true,
+      }
+		},
+		{
+			path: '/password',
+			name: 'password',
+      component: Password,
+      meta : {
+        auth : true,
+      }
+		},
     {
       path:"**",
       component:(resolve)=>require(["../components/error"],resolve)
