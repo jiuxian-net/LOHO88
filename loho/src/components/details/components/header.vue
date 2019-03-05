@@ -44,7 +44,6 @@ export default {
 element.style {
 }
 .page-header-main{
-	background: red;
 		width: 100%;
 		height: 1.2rem;
 		position: fixed;
