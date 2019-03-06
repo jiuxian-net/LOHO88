@@ -16,6 +16,7 @@ export default{
         state.user = params;
         state.token = getCookie();
         setCookie("user",state.user)
+        state.isLogin = true;
         console.log(state.token)
         
     },
@@ -32,7 +33,6 @@ export default{
     // },
     //注册添加状态改变
     handleAdd(state,params){
-        
         if(params.type == 1){
             state.username = params.e;
             console.log(state.username)
@@ -46,7 +46,8 @@ export default{
     handleRegister(state,params){
       state.user = params;
       state.token = getCookie();
-      console.log(state.token)
+      console.log(state.token);
+      state.isLogin = true;
       setCookie("user",state.user)
     }
 }

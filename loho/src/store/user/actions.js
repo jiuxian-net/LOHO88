@@ -27,7 +27,7 @@ export default {
         let data = await register(obj);
         console.log(data.status)
         if (data.status) {
-            params.push("home");
+            params.push("/preson");
             commit("handleRegister", data.userName)
             console.log(data)
         } else {

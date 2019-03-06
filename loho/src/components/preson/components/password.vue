@@ -1,7 +1,7 @@
 <template>
 	<div class = "xinxi">
 		<div class = "header">
-			<i class = "iconfont">&#xe64b;</i>
+			<i class = "iconfont" @click="handleBack()">&#xe64b;</i>
 			<span>修改密码</span>
 		</div>
 		<div class = "content">
@@ -25,6 +25,13 @@
 </template>
 
 <script>
+export default {
+	methods: {
+		handleBack(){
+			this.$router.back()
+		}
+	}
+}
 </script>
 
 <style lang="scss" scoped>

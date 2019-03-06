@@ -72,7 +72,7 @@ const router =  new Router({
       name: 'my',
       component:(resolve)=>require(["../components/my/my"],resolve),
       meta : {
-        auth : false,
+        auth : true,
       }
     },
 		{
@@ -161,17 +161,16 @@ const router =  new Router({
     }
   ]
 })
-console.log(router)
- router.beforeEach((to,from,next)=>{
-   
-   if(to.meta.auth){
+// console.log(router)
+  router.beforeEach((to,from,next)=>{
+    if(to.meta.auth){
+      
+        next()
      
      
-     if(store.state.user.token){
-       next()
-     }
-   }
- })
+    }
+
+  })
 
 
 export default router;

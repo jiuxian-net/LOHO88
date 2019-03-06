@@ -1,13 +1,13 @@
 <template>
 	<div class = "xinxi">
 		<div class = "header">
-			<i class = "iconfont">&#xe64b;</i>
+			<i class = "iconfont" @click="handleBack()">&#xe64b;</i>
 			<span>我的收藏</span>
 		</div>
 		<div class = "content">
 			<div class = "neirong">
 				<p>您还没有相关收藏</p>
-				<p class = "tiao">去挑选商品</p>
+				<p class = "tiao" @click="handleGoods()">去挑选商品</p>
 			</div>
 		</div>
 		<div class = "footer">
@@ -17,6 +17,16 @@
 </template>
 
 <script>
+export default {
+	methods: {
+		handleBack(){
+			this.$router.back()
+		},
+		handleGoods(){
+			this.$router.push("/home")
+		}
+	}
+}
 </script>
 
 <style lang="scss" scoped>

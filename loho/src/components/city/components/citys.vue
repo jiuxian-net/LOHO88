@@ -1,6 +1,6 @@
 <template>
 	<div class = "citys">
-		<div class = "citys_A-city" v-for = "(item,index) in letters" :key="item.id">
+		<div class = "citys_A-city" v-for = "(item) in letters" :key="item.id">
 			<p>{{item}}</p>
 			<div class = "citys_city">
 				<ul>
@@ -14,10 +14,10 @@
 <script>
 	import Vuex from "vuex";
 	export default{
-		
 		computed:{
 			...Vuex.mapState({
 				list:state=>state.city.list,
+				
 			}),
 			...Vuex.mapState({
 				letters:state=>state.city.letters,
@@ -31,7 +31,6 @@
 						cityId:cityId
 					}})
 				}
-				
 			}
 		},	
 

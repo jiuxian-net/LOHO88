@@ -12,7 +12,7 @@
 			<p>热门城市</p>
 			<div class = "hot_citys">
 				<ul>
-					<li v-for = "(item,index) in hot"><a href="##">{{item.cityName}}</a></li>
+					<li v-for = "(item) in hot" :key="item.id"><a href="##">{{item.cityName}}</a></li>
 				</ul>
 			</div>
 		</div>
@@ -35,7 +35,7 @@
 		width: 100%;
 		margin: .2rem 0;
 		.current_city{
-			wdith:100%;
+			width:100%;
 			height: .86rem;
 			background: #fff;
 			padding: .1rem .2rem;
@@ -81,7 +81,7 @@
 					background:#fff;
 					li{
 						width:25%;
-						hieght:100%;
+						height:100%;
 						a{
 							display: inline-block;
 							width:100%;

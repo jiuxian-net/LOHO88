@@ -1,11 +1,11 @@
 <template>
   <div id="footer">
     <ul>
-      <li v-for="(item) in tabBar" :key="item.id">
-        <router-link :to="{name:item.name}">
+      <li v-for="(item,index) in tabBar" :key="item.id" @click="handleClick(index)">
+       <a href="##">
           <i class="iconfont" v-html="item.icon"></i>
           <span>{{item.title}}</span>
-        </router-link>
+       </a>
       </li>
     </ul>
   </div>
@@ -13,7 +13,41 @@
 
 
 <script>
+import Vuex from "vuex"
 export default {
+  computed: {
+    ...Vuex.mapState({
+      token : state=>state.user.token,
+    })
+  },
+  methods: {
+    handleClick(index){
+      switch(index){
+        case 0:
+        this.$router.push("/home");
+        //console.log(this.token)
+        break;
+        case 1:
+        this.$router.push("/group");
+        break;
+        case 2:
+        this.$router.push("/cart");
+        break;
+        case 3:
+        this.$router.push("/shop");
+        break;
+        case 4:
+        if(this.token){
+          this.$router.push("/preson");
+        }else{
+           this.$router.push("/my");
+        };
+          
+        
+        break;
+      }
+    }
+  },
   data() {
     return {
       tabBar: [

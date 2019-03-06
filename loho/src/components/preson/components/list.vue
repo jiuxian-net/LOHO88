@@ -15,7 +15,7 @@
 			
 		</div>
 		<div class = "lists">
-			<div class = "data" v-for = "(item,index) in lists">
+			<div class = "data" v-for = "(item,index) in lists" :key="item.id" @click="handleRouter(index)">
 				<div class = "data_left">
 					<i class = "iconfont" v-html = "item.icon"></i>
 					<span>{{item.name}}</span>
@@ -57,7 +57,33 @@
 					}
 				]
 			}
-		}
+		},
+		methods: {
+			handleRouter(index){
+				switch(index){
+					case 0:
+					this.$router.push("/xinxi");
+					break;
+					case 1:
+					this.$router.push("./mytuangou");
+					break;
+					case 2:
+					this.$router.push("./shoucang");
+					break;
+					case 3:
+					this.$router.push("./yanguang");
+					break;
+					case 4:
+					this.$router.push("./dizhi");
+					break;
+					case 5:
+					this.$router.push("./password");
+					break;
+				}
+			}
+		},
+		
+
 	}
 </script>
 

@@ -2,10 +2,10 @@
 	<div class="top">
 		<div class = "url">
 			<img src="http://img.loho88.com/images/loho-m/index_logo.png">
-			<span class="top_name">lhsj_15094869969</span>
+			<span class="top_name">{{user}}</span>
 		</div>
 		<div class = "order">
-			<a href="##" v-for= "(item,index) in presons" :key="item.id">
+			<a href="##" v-for= "(item) in presons" :key="item.id">
 				<i class= "iconfont" v-html = "item.iconfont"></i>
 				<p>{{item.name}}</p>
 			</a>
@@ -16,7 +16,13 @@
 </template>
 
 <script>
+import Vuex from "vuex"
 	export default{
+		computed: {
+			...Vuex.mapState({
+				user : state=>state.user.user,
+			})
+		},
 		data(){
 			return{
 				presons:[

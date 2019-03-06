@@ -6,4 +6,5 @@ export default{
     token:""||getCookie(),
     flag : null,
    color : "color",
+   isLogin:false
 }

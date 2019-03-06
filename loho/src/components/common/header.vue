@@ -2,7 +2,7 @@
   <div id="header">
     <div class="left">
       <routerLink to = "/city">
-        北京市
+        <span>北京</span>
         <i class="iconfont">&#xe695;</i>
       </routerLink>
     </div>
@@ -11,16 +11,35 @@
       <router-link to="/cart">
         <i class="iconfont cart">&#xe670;</i>
       </router-link>
-			<router-link to="/my">
-				<a href="##">
-					<i class="iconfont my">&#xe61a;</i>
-				</a>
-			</router-link>
+		
+				<a href="##" >
+         
+					<i class="iconfont my" @click="handleClick">&#xe61a;</i>
+				
+        </a>
+		
     </div>
   </div>
 </template>
 <script>
-export default {};
+import Vuex from "vuex"
+export default {
+computed: {
+    ...Vuex.mapState({
+      token : state=>state.user.token,
+    })
+  },
+  methods: {
+    handleClick(){
+       if(this.token){
+          this.$router.push("/preson");
+        }else{
+           this.$router.push("/my");
+        };
+    }
+    
+  },
+};
 </script>
 <style lang="scss" scoped>
 #header {
