@@ -4,7 +4,7 @@
 			<p>{{item}}</p>
 			<div class = "citys_city">
 				<ul>
-					<li v-for="(a) in list[item]" :key="a.id" @click="handleBtn(a.cityId)">{{a.cityName}}</li>
+					<li v-for="(a) in list[item]" :key="a.id" @click="handleBtn(a.cityId,)">{{a.cityName}}</li>
 				</ul>
 			</div>
 		</div>
@@ -25,10 +25,10 @@
 		},
 		methods: {
 			handleBtn(cityId){
-				console.log(cityId)
+			
 				if(cityId){
 					this.$router.push({path:"/shop",query:{
-						cityId:cityId
+						cityId
 					}})
 				}
 				

@@ -61,8 +61,11 @@
 				subadd: "cart/subadd",
 				delone: "cart/delone",
 				allchangestatus: "cart/allchangestatus",
-				delecart: "cart/delecart"
 			}),
+			delecart(){
+				localStorage.clear();
+				this.$router.go(0);
+			}
 		}
 	}
 </script>

@@ -16,9 +16,7 @@
 	import Header from "./components/header";
 	import Selectcard from "./components/selectcard"
 export default {
-	created() {
-		//this.handleShopData();
-			//console.log(this.$route.query)
+	created(){
 			let {cityId}=this.$route.query;
 			
 			this.handleCity(cityId);

@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <Header-com/>
+    <Header-com />
     <div class="homeWrapper wrapper" ref="homeWrapper">
       <div class="content">
         <Swiper-com/>
@@ -37,6 +37,7 @@ export default {
   },
   created () {
     this.handleHomeData();
+		
   },
   methods: {
     ...Vuex.mapActions({

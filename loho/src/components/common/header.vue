@@ -2,7 +2,7 @@
   <div id="header">
     <div class="left">
       <routerLink to = "/city">
-        北京市
+		北京
         <i class="iconfont">&#xe695;</i>
       </routerLink>
     </div>
@@ -20,7 +20,8 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+};
 </script>
 <style lang="scss" scoped>
 #header {

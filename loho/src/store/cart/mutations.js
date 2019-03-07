@@ -64,9 +64,5 @@ export default{
 // 			}
 		}
 		
-	},
-	delecart(state){
-		localStorage.clear();		
-	}
-	
+	},	
 }
