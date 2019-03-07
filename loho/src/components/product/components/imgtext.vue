@@ -21,9 +21,6 @@ export default {
 		width: 100%
 		p{
 			width: 100%;
-// 			img{
-// 				width: 100%;
-// 			}
 		}
 		}
 	}
