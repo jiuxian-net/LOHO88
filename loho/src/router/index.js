@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/home/home'
-import Shop from "@/components/home/home";
+import Shop from "@/components/shop/shop";
 import Cart from "../components/cart/cart";
 import My from "../components/my/my";
 import Group from "../components/group/group"
@@ -162,16 +162,16 @@ const router =  new Router({
   ]
 })
 console.log(router)
- router.beforeEach((to,from,next)=>{
-   
-   if(to.meta.auth){
-     
-     
-     if(store.state.user.token){
-       next()
-     }
-   }
- })
+//  router.beforeEach((to,from,next)=>{
+//    
+//    if(to.meta.auth){
+//      
+//      
+//      if(store.state.user.token){
+//        next()
+//      }
+//    }
+//  })
 
 
 export default router;

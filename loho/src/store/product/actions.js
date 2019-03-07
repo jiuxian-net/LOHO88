@@ -10,9 +10,14 @@ export default{
        
     },
     async handleProductPeddleData({commit},params){
-        console.log(11)
-        let data = await handleProductPeddleData("/api/goods/peddle/"+params,{})
-        commit("handleProductPeddleData",data.result)
+		console.log(params);
+        let data = await handleProductPeddleData("/api/goods/peddle/"+params,{});
+		console.log(data)
+        commit("handleProductPeddleData",data.result);
+		
        
-    }
+    },
+	handlegocart({commit},params){
+		commit("handlegocart",params);
+	}
 }

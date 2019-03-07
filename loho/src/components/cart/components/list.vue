@@ -1,62 +1,71 @@
 <template>
-	<div class="cart-menu">
+	<div class="cart-menu-box">
 		<div class="cart-list">
-			<ul class="cart-list-content">
+			<ul class="cart-list-content" v-for="(item,index) in info">
 				<li>
 					<span>
-						<input type="checkbox"><label>单品</label>
+						<input type="checkbox" @click="changestatus(index)" :checked="item.flag"><label>单品</label>
 					</span>
-					<span>￥299</span>
+					<span>￥{{item.shopPrice/100*100}}</span>
 				</li>
 				<li>
 
-					<div> <img src="http://image.loho88.com/images/201711/G_1510598115410340254.jpg" alt=""></div>
+					<div> <img :src="'http://image.loho88.com/'+item.pics[0]" alt=""></div>
 					<div>
-						<a>【超轻金属】LOHO儿童墨镜 绿色彩膜 防紫外线 LH6102-C2</a>
+						<a>{{item.goodsName}}</a>
 						<p>颜色：碳黑色（绿色彩膜)</p>
-						<p><span>￥299</span> <span>x1</span></p>
+						<p><span>￥{{item.shopPrice/100*100*item.isOnSale}}</span> <span>x{{item.isOnSale}}</span></p>
 					</div>
 				</li>
 				<li>
 					<p>
-						<i class="iconfont">&#xe77f;</i>
+						<i class="iconfont" @click="delone(index)">&#xe77f;</i>
 						<a href="">促销优惠</a>
 					</p>
 
-					<p><a href="">-</a><span>1</span><a href="">+</a></p>
+					<p>
+						<a @click="subtrack(index)">-</a>
+						<input type="text" :value="item.isOnSale">
+						<a @click="subadd(index)">+</a>
+					</p>
 				</li>
 			</ul>
 			<div class="cart-dele">
 				<div>
 					<label for="">
-						<input type="checkbox"  checked="checked">
+						<input type="checkbox" @click="allchangestatus()" :checked="show">
 					</label>
-					<a href="">删除选中</a>
+					<a @click="handledelindex(index)">删除选中</a>
 				</div>
-				<div><a href="">清空购物车</a></div>
+				<div><a @click="delecart()">清空购物车</a></div>
 			</div>
+
 		</div>
-		<div class="cart-sub">
-			<p>合计(不含运费):<span>￥399</span></p>
-			<button><div></div>结算<span>(1)</span></button>
-		</div>
+
 	</div>
 </template>
 
 <script>
 	import Vuex from 'vuex';
 	export default {
-		created(){
-			this.handleAddcart()
+		computed: {
+			...Vuex.mapState({
+				info: state => state.cart.info,
+				show: state => state.cart.show,
+			}),
 		},
-		methods:{
-			...Vuex.mapActions({
-				handleAddcart : "cart/handleAddcart"
-			})
+		methods: {
+			...Vuex.mapMutations({
+				changestatus: "cart/changestatus",
+				subtrack: "cart/subtrack",
+				subadd: "cart/subadd",
+				delone: "cart/delone",
+				allchangestatus: "cart/allchangestatus",
+				delecart: "cart/delecart"
+			}),
 		}
 	}
 </script>
-
 <style lang="scss">
 	@mixin flex($flex : flex, $content : space-between, $align : center, $inline : row) {
 		display: $flex;
@@ -66,21 +75,22 @@
 
 	}
 
-	.cart-menu {
+	.cart-menu-box {
+		// position: relative;
 		width: 100%;
-		height: 8rem;
-		padding: 0 .15rem;
-		@include flex($inline: column) 
-		.cart-list {
+		padding: 0 .15rem 2rem;
+
+		@include flex($inline: column) .cart-list {
 			width: 100%;
-			height: 3.2rem;
-			border: .01rem solid #ddd;
-			background: #fff;
-			margin: .15rem 0;
+			height: 100%;
+
 
 			.cart-list-content {
 				width: 100%;
-				height: 100%;
+				height: 3.2%;
+				margin: .15rem 0;
+				background: #fff;
+				border: .01rem solid #ddd;
 
 				>li {
 					padding: 0 .15rem;
@@ -90,6 +100,7 @@
 				li:nth-of-type(1) {
 					width: 100%;
 					height: .6rem;
+					padding: 0 .15rem;
 
 					span {
 						width: .82rem;
@@ -105,7 +116,7 @@
 						width: .68rem;
 						color: red;
 						font-size: .24rem;
-						
+
 					}
 				}
 
@@ -140,7 +151,6 @@
 							font-size: .26rem;
 							color: #000;
 							text-align: left;
-
 						}
 
 						>p {
@@ -182,7 +192,7 @@
 						}
 
 						a,
-						span {
+						input {
 							width: 1.44rem;
 							font-size: .26rem;
 							line-height: .48rem;
@@ -204,12 +214,13 @@
 						@include flex();
 
 						a,
-						span {
+						input {
 							width: .48rem;
 						}
 
-						span {
+						input {
 							background: #fff;
+							text-align: center;
 							border-right: 0;
 							border-left: 0;
 						}
@@ -235,61 +246,42 @@
 				width: 100%;
 				height: .8rem;
 				border: .01rem solid #ddd;
-				border-radius:.1rem; 
+				border-radius: .1rem;
 				@include flex();
 				background: #fff;
 				line-height: .8rem;
-				margin-top:.15rem;
+				margin-top: .15rem;
 				padding: 0 .15rem;
-				div:nth-of-type(1){
+
+				div:nth-of-type(1) {
 					width: 2rem;
 					@include flex();
-					label{
+
+					label {
 						width: .5rem;
 						height: 100%;
 						display: block;
-						border-right:.01rem solid #ddd; 
+						border-right: .01rem solid #ddd;
 						text-align: left;
 						line-height: .8rem;
 					}
-					a{
-						color:blue;
+
+					a {
+						color: blue;
 					}
-					
+
 				}
-				div:nth-of-type(2){
-					a{
+
+				div:nth-of-type(2) {
+					a {
 						color: red;
 					}
-					
+
 				}
-				
+
 			}
 
-		}
-		.cart-sub {
-			width: 100%;
-			height: .8rem;
-			@include flex();
-			background: #fff;
-			line-height: .8rem;
-			// position: relative;
-			font-size: .28rem;
-			p{
-				span{
-					color: red;
-					font-size: .32rem;
-				}	
-			}
-			
-			button{
-				width:2rem;
-				height: .92rem;
-				background: #aaa;	
-				color:#fff;
-				font-size: .32rem;
-				// box-shadow:-.1rem .1rem -.1rem .1rem  rgba(0,0,0,.3) ; 
-			}
+
 		}
 
 

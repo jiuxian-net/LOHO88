@@ -1,7 +1,7 @@
 <template>
   <div class="list">
     <ul class="content">
-      <li v-for="(item) in list" class="content-list" :key="item.id">
+      <li v-for="(item) in list" class="content-list">
         <span v-if="item.isNew">NEW</span>
         <p>
           <img :src="'http://image.loho88.com/'+item.img" alt>
@@ -19,6 +19,12 @@
 <script>
 import Vuex from "vuex";
 export default {
+	data(){
+		return{
+			
+		}
+	},
+	
   computed: {
     ...Vuex.mapState({
       list: state => state.product.list

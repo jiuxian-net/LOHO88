@@ -2,7 +2,7 @@
   <div class="category">
     <ul>
       <li v-for="(item,index) in cates" :key="item.id">
-			<button @click="handleClick(item.tid,item.cid,item.tag)">
+			<button @click="handleClick(item.tid,item.cid,item.tag,index)">
 				<div class="cate_img"><img :src="item.pic" alt=""/></div>
 				<span>{{item.tag}}</span>
 			</button>
@@ -20,13 +20,14 @@ export default {
         })
     },
 	methods: {
-		handleClick(tid,cid,tag) {
-			if({tid,cid,tag}){
+		handleClick(tid,cid,tag,index) {
+			if(index != this.cates.length -1){
 				this.$router.push({path :'/details',query:{
 					 tid,cid,tag
 				}});
-				this.$router.go(0)
-			}//else{跳转体验店}
+			}else{
+				this.$router.push("/shop");
+			}
 		
 		},
         

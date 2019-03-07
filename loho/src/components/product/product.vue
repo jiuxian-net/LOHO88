@@ -23,9 +23,8 @@ import List from "./components/list"
 import Footer from "./components/footer"
 export default {
   created(){
-    
     let {gid} = this.$route.query;
-    console.log(gid)
+		console.log(gid)
     this.handleProductGoodsData(gid)
     this.handleProductPeddleData(gid)
   },
@@ -36,8 +35,10 @@ export default {
     "Select-com" : Select,
     "List-com" : List,
     "Footer-com" : Footer,
+		
     
   },
+	
   methods: {
     ...Vuex.mapActions({
       handleProductGoodsData : "product/handleProductGoodsData",

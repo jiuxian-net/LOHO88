@@ -1,5 +1,5 @@
 <template>
-  <div class="mask" v-show="flag">
+  <div class="mask" v-if="flag">
     <div class="dialog">
       <div class="header">
         登录
@@ -32,11 +32,12 @@ export default {
 .mask {
   width: 100%;
   height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: #000;
-  opacity: 0.7;
+  background: rgba(0,0,0,.7);
+	z-index: 1000;
+	position: fixed;
+	top:0;
+	left:0;
+	
   .dialog {
     width: 100%;
     height: 5.2rem;
@@ -44,7 +45,7 @@ export default {
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 10;
+		z-index: 100;
     .header {
       width: 100%;
       height: 0.6rem;

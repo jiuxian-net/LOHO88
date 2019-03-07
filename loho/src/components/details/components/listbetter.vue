@@ -1,9 +1,8 @@
 <template>
 	<div class="wrapper details-wrapper">
-		<ul class="content" @click="handlegocart()">
-			<!-- <NavBar-com></NavBar-com> -->
+		<ul class="content-list" >
 			<li v-for="(item) in list" class="content-list">
-				<button>
+				<button @click="handlegocart(item.goodsId)">
 					<span v-if="item.isNew">NEW</span>
 					<p><img :src="'http://image.loho88.com/'+item.img" alt=""></p>
 					<p>{{item.title}}</p>
@@ -17,9 +16,7 @@
 	
 </template>
 <script>
-	// import BScroll from 'better-scroll';
 	import Vuex from 'vuex';
-	// import NavBar from './navbar';
 	export default {
 		data(){
 			return {
@@ -28,30 +25,11 @@
 		},
 		props:["list"],
 		methods:{
-			handlegocart(){
-				this.$router.push("/product");
+			handlegocart(gid){
+				console.log(gid)
+				this.$router.push({path:"/product",query:{gid}});
 			}
 		},
-		components: {
-			// "NavBar-com": NavBar,
-		},
-// 		computed: {
-// 			...Vuex.mapState({
-// 				page: state => state.details.page,
-// 			}),
-// 
-// 		},
-// 		mounted() {
-// 			this.$nextTick(() => {
-// 				this.scroll = new BScroll(this.$refs.detailsWrapper, {
-// 					scrollY: true,
-// 					pulldown: true,
-// 					pullup: true
-// 				})
-// 				
-// 				
-// 			})
-// 		},
 	}
 </script>
 <style lang="scss">
@@ -59,18 +37,12 @@
 		width: 100%;
 		background:#f2f2f2;
 		z-index: 100;
-		// position: absolute;
-		top:1rem;
-		left: 0;
-		// height: 100%;
-		.content {
+		.content-list {
 			width: 100%;
 			height: 100%;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
-			
-			
 			.content-list {
 				width: 50%;
 				height: 5.14rem;

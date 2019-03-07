@@ -5,23 +5,30 @@
     </div>
 </template>
 <script>
-import Tabbar from "./tabbar"
+	import Vue from 'Vue';
+import Vuex from 'vuex';
+import Tabbar from "./tabbar";
 import Imgtext from "./imgtext"
-import Params from "./params"
+import Params from "./params";
 import Eval from "./eval"
 export default {
+	
     data(){
         return {
-            flag : "Imgtext-com"
+            flag : "Imgtext-com",
         }
     },
     components : {
         "Tabbar-com" : Tabbar,
-        "Imgtext-com" : Imgtext,
         "Params-com" : Params,
-        "Eval-com" : Eval
-
+        "Eval-com" : Eval,
+		"Imgtext-com" : Imgtext
     },
+	 computed:{
+	 	...Vuex.mapState({
+	 	    text : state=>state.product.txtcontent,
+	 	})
+	 },
     methods: {
         handleToggle(index){
             switch(index){

@@ -13,7 +13,6 @@ export default {
                 "账号密码登录"
             ],
             afterIndex : 0,
-
         }
     },
     methods: {

@@ -6,4 +6,5 @@ export default{
     list : [],
     txtcontent : "",
     num : 0,
+	tag_en : ""
 }

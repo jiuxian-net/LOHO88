@@ -48,7 +48,7 @@ export default {
       console.log(gid)
       
         this.$router.push({path : "/product",query:{
-          gid:gid,
+          gid:gid
         }})
       
         

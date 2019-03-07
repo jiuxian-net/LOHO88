@@ -2,25 +2,13 @@ import axios from "axios";
 import qs from "qs";
 
 
-const http = axios.create({
-	// responseType: 'json',
-// 	proxy: {
-//     host: '127.0.0.1',
-//     port: 9000,
-//     auth:{
-//       username: 'mikeymike',
-//       password: 'rapunz3l'
-//     }
-  // },
-})
+const http = axios.create({})
 
 
 //请求拦截
 http.interceptors.request.use((config)=>{
-	console.log(config)
     return config;
 },(err)=>{
-	console.log(err)
     return Promise.reject(err);
 })
 

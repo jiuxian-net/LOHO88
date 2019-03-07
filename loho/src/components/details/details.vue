@@ -27,11 +27,7 @@
 			}
 		},
 		created() {
-
 			this.tag = this.$route.query.tag;
-// 			let {tid,cid} = this.$route.query;
-// 			console.log({tid,cid}, this)
-// 			this.handleDetails({tid,page: 1}) //params
 			let {tid,cid} = this.$route.query;
 			this.handleDetailspage({tid,page: 1})
 		},
@@ -66,12 +62,6 @@
 			}),
 			pulltop() {
 				this.scroll.scrollTo(0, 0, 500);
-// 				this.$refs.details.style = {
-// 					
-// 						"transition-duration": 5 +'ms',
-// 						"transform": "translate0(0,0) scale(1) translateZ(0)",
-// 						"transition-timing-function":"cubic-bezier(0,0,1,1)"
-// 				}
 			},
 			//点击navBar重新渲染页面
 			handleclick(data){
@@ -115,14 +105,7 @@
 					cid
 				} = this.$route.query;
 				if (this.page <= 4) {
-// 					this.handleDetails({
-// 						tid,
-// 						page: this.page
-// 					});
 			let {tid,cid} = this.$route.query;
-// 			if(tid == "82"){
-// 				this.page=1;
-// 			}
 			this.handleDetailspage({tid,page: this.page})
 				}
 			})
@@ -143,16 +126,13 @@
 		background: #fff;
 		z-index: 100;
 		position: relative;
-
 		.details {
 			width: 100%;
 			background: #fff;
 			z-index: 100;
 			padding-top:1.2rem; 
-			// position: absolute;
 			top:1rem;
 			left: 0;
-			// height: 100%;
 			overflow: hidden;
 			.loading-bottom {
 				width: 100%;
@@ -161,9 +141,7 @@
 				line-height: 1rem;
 				font-size: .3rem;
 				color: #333;
-				// position: absolute;
 			}
-
 			.iconfont {
 				position: fixed;
 				bottom: .3rem;
